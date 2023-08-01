@@ -188,18 +188,18 @@ export default function HeroSlideshow() {
         {/* current slide! */}
         <Slide
           ref={slideRef}
-          title={currentSlide.title}
-          src={currentSlide.poster}
-          id={currentSlide.id}
+          title={currentSlide?.title}
+          src={currentSlide?.poster}
+          id={currentSlide?.id}
         />
         {/* clone of current poster/movie for animation*/}
         <Slide
           ref={clonedSlideRef}
           onAnimationEnd={handleAnimationEnd}
-          title={clonedSlide.title}
+          title={clonedSlide?.title}
           className="absolute inset-0"
-          src={clonedSlide.poster}
-          id={currentSlide.id}
+          src={clonedSlide?.poster}
+          id={currentSlide?.id}
         />
         {/* buttons (controller) */}
         <SlideShowController
