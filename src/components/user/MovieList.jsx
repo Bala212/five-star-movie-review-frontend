@@ -16,7 +16,7 @@ const trimTitle = (text = "") => {
 
 export default function MovieList({ title, movies = [] }) {
   // if there are no movies!
-  if (!movies.length) return null;
+  // if (!movies.length) return null;
 
   return (
     <div>
