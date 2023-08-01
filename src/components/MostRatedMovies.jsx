@@ -14,6 +14,8 @@ export default function MostRatedMovies() {
     // send a backend request to fetch most rated movies
     const { error, movies } = await getMostRatedMovies();
 
+    console.log(movies);
+
     // if any error
     if (error) return updateNotification("error", error);
 
@@ -37,7 +39,7 @@ export default function MostRatedMovies() {
           return (
             <li key={movie.id}>
               <h1 className="text-secondary dark:text-white font-semibold">
-                {movie.title}
+                {movie?.title}
               </h1>
               <div className="flex space-x-2">
                 <RatingStar rating={movie.reviews?.ratingAvg} />

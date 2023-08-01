@@ -31,6 +31,7 @@ const genderOptions = [
   { title: "Female", value: "female" },
   { title: "Other", value: "other" },
 ];
+
 export default function ActorForm({
   title,
   initialState,
